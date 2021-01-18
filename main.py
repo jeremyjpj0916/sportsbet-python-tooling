@@ -26,5 +26,5 @@ if __name__ == '__main__':
                                          row[per_dollar_payoutIndex], row[dateIndex], row[american_oddsIndex])
         gamesList.append(tempGame)
 
-    # Print the teams choose as a check from list
+    # Print the games list as a test. 
     print(gamesList)
