@@ -15,3 +15,6 @@ May add a dollar amount parameter you can declare at the top of code too so you 
 Long term goal will be a bot to then go in and automatically place the bets for you localhost(If first dudes website picks end up being LT profitable after a month). 
 
 Note: Using python 3.9 localhost on my windows lappy. 
+
+
+I plan on slamming all the code into main.py like the scrub that I am haha. 
