@@ -14,3 +14,5 @@ May add a Dollar amount parameter you can declare at the top too so you know how
 on the day.
 
 Long term goal will be a bot to then go in and automatically place the bets for you localhost. 
+
+Note: Using python 3.9 localhost on my windows lappy. 
