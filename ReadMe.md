@@ -12,6 +12,6 @@ To hopefully see if either Bovada or BetOnline have matching ML odds or better f
 
 May add a dollar amount parameter you can declare at the top of code too so you know how much to allocate based on the available games that match up with what the bookies have offered on the day.
 
-Long term goal will be a bot to then go in and automatically place the bets for you localhost. 
+Long term goal will be a bot to then go in and automatically place the bets for you localhost(If first dudes website picks end up being LT profitable after a month). 
 
 Note: Using python 3.9 localhost on my windows lappy. 
