@@ -10,8 +10,7 @@ https://github.com/JeMorriso/PySBR
 
 To hopefully see if either Bovada or BetOnline have matching ML odds or better for the games mentioned, then list them in the output.
 
-May add a Dollar amount parameter you can declare at the top too so you know how much to allocate based on the availible games that match up with what the bookies have offered
-on the day.
+May add a dollar amount parameter you can declare at the top of code too so you know how much to allocate based on the available games that match up with what the bookies have offered on the day.
 
 Long term goal will be a bot to then go in and automatically place the bets for you localhost. 
 
