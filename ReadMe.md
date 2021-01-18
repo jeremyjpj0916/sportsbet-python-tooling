@@ -2,7 +2,7 @@
 
 https://brilliantscarcity354.github.io/sportsbettingalgorithm.html
 
-Which produces this file daily at 2:00AM EST:
+Which produces this raw csv file daily at 2:00AM EST:
 https://raw.githubusercontent.com/axz2000/sportsbook/main/masterScript/masterPush.csv
 
 Then Leverage this python tool:
