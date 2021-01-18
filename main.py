@@ -20,7 +20,7 @@ if __name__ == '__main__':
     # Make an empty games list
     gamesList = []
 
-    # Loop through the lines in the file and get each coordinate
+    # Loop through the lines in the file and get each element we want for sportsbetgame object and add it to the list of games.
     for row in csvReader:
         tempGame = classes.SportsBetGame(row[teamChosenIndex], row[percentageIndex], row[leagueIndex],
                                          row[per_dollar_payoutIndex], row[dateIndex], row[american_oddsIndex])
