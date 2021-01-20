@@ -1,11 +1,16 @@
 import csv
 import io
+
+import pysbr
 import requests
 import classes
 from pysbr import *
 from datetime import datetime
 
 if __name__ == '__main__':
+
+    # Find leagues test
+    # league = pysbr.SearchLeagues("Turkish")
 
     ### First portion, scrape all games we want to bet on ###
 
@@ -50,6 +55,9 @@ if __name__ == '__main__':
     cl_nfl = CurrentLines(e_nfl.ids(), nfl.market_ids(game_type), sb.ids(bookie_list))
     cl_nba = CurrentLines(e_nba.ids(), nba.market_ids(game_type), sb.ids(bookie_list))
 
+    # List to contain matches that meet our bookie criteria.
+    filteredGamesList = []
+
     for game in gamesList:
         if game.league == "KHL":
             print("KHL LEAGUE GAME PROCESSING")
@@ -66,9 +74,12 @@ if __name__ == '__main__':
                             if match['american odds'] > game.bookie_odds:
                                 game.bookie = match['sportsbook']
                                 game.bookie_odds = match['american odds']
+                                filteredGamesList = filteredGamesList[:-1]  # Remove last appended odds for best odds
+                                filteredGamesList.append(game)
                         else:
                             game.bookie = match['sportsbook']
                             game.bookie_odds = match['american odds']
+                            filteredGamesList.append(game)
         elif game.league == "NBA":
             print("NBA LEAGUE GAME PROCESSING")
             for match in cl_nba.list(e_nba):
@@ -78,9 +89,12 @@ if __name__ == '__main__':
                             if match['american odds'] > game.bookie_odds:
                                 game.bookie = match['sportsbook']
                                 game.bookie_odds = match['american odds']
+                                filteredGamesList = filteredGamesList[:-1]  # Remove last appended odds for best odds
+                                filteredGamesList.append(game)
                         else:
                             game.bookie = match['sportsbook']
                             game.bookie_odds = match['american odds']
+                            filteredGamesList.append(game)
         elif game.league == "LLA":
             print("LLA LEAGUE GAME PROCESSING")
             print(game)
@@ -113,4 +127,4 @@ if __name__ == '__main__':
             print(game)
 
     # Print the games list as a test.
-    print(gamesList)
+    print(filteredGamesList)
